@@ -4,14 +4,11 @@ If you want to use Dijit (a Dojo Toolkit component) with Ruby on Rails, this gem
 
 ## Setup
 
-Just open your application's `Gemfile` and edit it adding the gem to your assets group:
+Just open your application's `Gemfile` and edit it adding the gem:
 
 ```ruby
-group :assets do
-  # ...
-  gem 'dojo-rails'
-  gem 'dijit-rails'
-end
+gem 'dojo-rails'
+gem 'dijit-rails'
 ```
 
 Just run the `bundle` comand yo install it. Then in your javascript/Coffeescript file, you can add Dijit packages to your require package list just like that:
