@@ -18,6 +18,25 @@ require(["dijit/Editor"], (editor) ->
   # ... your code
 )
 ```
+
+## Usage with Asset Pipeline in Production
+
+To use with production and asset pipeline from Rails 3.1 you will need to have the [djConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/) hash set before you load the dojo/dojo library
+
+*This is critical for production mode because otherwise the require[ ] statements will not load libraries correctly*
+
+Example contents of application.js
+```coffeescript
+//= require dojo_config
+//= require dojo/dojo
+```
+Contents of dojo_config.js
+```javascript
+dojoConfig = {
+  baseUrl: '/assets/dojo/'
+};
+```
+
 ## Contributing
 
 ### Code
