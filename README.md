@@ -14,9 +14,8 @@ gem 'dijit-rails'
 Just run the `bundle` comand yo install it. Then in your javascript/Coffeescript file, you can add Dijit packages to your require package list just like that:
 
 ```coffeescript
-require(["dijit/Editor"], (editor) ->
+require ["dijit/Editor"], (editor) ->
   # ... your code
-)
 ```
 
 ## Usage with Asset Pipeline in Production
