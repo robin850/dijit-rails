@@ -1,6 +1,13 @@
 # Dijit with Ruby on Rails
 
-If you want to use Dijit (a Dojo Toolkit component) with Ruby on Rails, this gem is certainly the answer to your problem. There is no real implementation of Dojo and its components for Rails so this gem should make you smile. Please also see [dojo-rails](https://github.com/robin850/dojo-rails) and [dojox-rails](https://github.com/robin850/dojox-rails).
+If you want to use Dijit (a Dojo Toolkit component) with Ruby on Rails, this 
+gem is certainly the answer to your problem. There is no real implementation of
+Dojo and its components for Rails so this gem should make you smile. This project
+is divided into several gems: 
+
+* [dojo-rails](https://github.com/robin850/dojo-rails)
+* **dijit-rails**
+* [dojox-rails](https://github.com/robin850/dojox-rails).
 
 ## Setup
 
@@ -11,7 +18,8 @@ gem 'dojo-rails'
 gem 'dijit-rails'
 ```
 
-Just run the `bundle` comand yo install it. Then in your javascript/Coffeescript file, you can add Dijit packages to your require package list just like that:
+Just run the `bundle` comand yo install it. Then in your javascript/Coffeescript
+file, you can add Dijit packages to your require package list just like that:
 
 ```coffeescript
 require ["dijit/Editor"], (editor) ->
@@ -20,27 +28,19 @@ require ["dijit/Editor"], (editor) ->
 
 ## Usage with Asset Pipeline in Production
 
-To use with production and asset pipeline from Rails 3.1 you will need to have the [djConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/) hash set before you load the dojo/dojo library
+To use with production and asset pipeline from Rails 3.1 you will need to have
+the [dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/)
+hash set before you load the dojo/dojo library
 
-*This is critical for production mode because otherwise the require[ ] statements will not load libraries correctly*
-
-Example contents of application.js
-```coffeescript
-//= require dojo_config
-//= require dojo/dojo
-```
-Contents of dojo_config.js
-```javascript
-dojoConfig = {
-  baseUrl: '/assets/dojo/'
-};
-```
+Please see the [dedicated page on the wiki]((https://github.com/robin850/dojo-rails/wiki/Configuration-with-dojoConfig))
+for further information on this variable.
 
 ## Contributing
 
 ### Code
 
-If you found a bug or just want to improve the project at some level, you should just:
+If you found a bug or just want to improve the project at some level, you 
+should just:
 
 * Fork the project
 * Clone the repository on your local machine
@@ -51,11 +51,16 @@ If you found a bug or just want to improve the project at some level, you should
 
 ### Issues and bugs
 
-For issues and bugs, please open a [new ticket](https://github.com/robin850/dijit-rails/issues/new) to the issue tracker. Thanks for your help!
+For issues and bugs, please open a 
+[new ticket](https://github.com/robin850/dijit-rails/issues/new) to the issue
+tracker. Thanks for your help!
 
 ## License
 
-This project is released under the MIT license. Dojo Toolkit is available under either the terms of the modified BSD license or the Academic Free License version 2.1. Please [visit the official page](http://dojotoolkit.org/license) for further information.
+This project is released under the MIT license. Dojo Toolkit is available under
+either the terms of the modified BSD license or the Academic Free License version
+2.1. Please [visit the official page](http://dojotoolkit.org/license) for further
+information.
 
 Copyright (c) 2012 Robin Dupret
 
