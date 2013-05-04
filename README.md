@@ -1,9 +1,9 @@
 # Dijit with Ruby on Rails
 
-If you want to use Dijit (a Dojo Toolkit component) with Ruby on Rails, this 
+If you want to use Dijit (a Dojo Toolkit component) with Ruby on Rails, this
 gem is certainly the answer to your problem. There is no real implementation of
 Dojo and its components for Rails so this gem should make you smile. This project
-is divided into several gems: 
+is divided into several gems:
 
 * [dojo-rails](https://github.com/robin850/dojo-rails)
 * **dijit-rails**
@@ -39,19 +39,19 @@ for further information on this variable.
 
 ### Code
 
-If you found a bug or just want to improve the project at some level, you 
+If you found a bug or just want to improve the project at some level, you
 should just:
 
 * Fork the project
 * Clone the repository on your local machine
 * Create a new branch with `git checkout -b new_feature`
 * Make changes and commit them
-* Then `git push origin master`
+* Then `git push origin new_feature`
 * And finally open a new pull request on this repo
 
 ### Issues and bugs
 
-For issues and bugs, please open a 
+For issues and bugs, please open a
 [new ticket](https://github.com/robin850/dijit-rails/issues/new) to the issue
 tracker. Thanks for your help!
 
@@ -79,5 +79,5 @@ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
 THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
