@@ -1,7 +1,7 @@
 module Dijit
   module Rails
-    MAJOR = 0
-    MINOR = 14 
+    MAJOR = 1
+    MINOR = 0 
     TINY = 0
     VERSION = [MAJOR, MINOR, TINY].compact.join(".")
   end
