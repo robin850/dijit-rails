@@ -1,6 +1,6 @@
 //>>built
 define("dijit/_PaletteMixin",["dojo/_base/declare","dojo/dom-attr","dojo/dom-class","dojo/dom-construct","dojo/_base/event","dojo/keys","dojo/_base/lang","./_CssStateMixin","./focus","./typematic"],function(_1,_2,_3,_4,_5,_6,_7,_8,_9,_a){
-return _1("dijit._PaletteMixin",[_8],{defaultTimeout:500,timeoutChangeRate:0.9,value:"",_selectedCell:-1,tabIndex:"0",cellClass:"dijitPaletteCell",dyeClass:null,summary:"",_setSummaryAttr:"paletteTableNode",_dyeFactory:function(_b){
+return _1("dijit._PaletteMixin",[_8],{defaultTimeout:500,timeoutChangeRate:0.9,value:"",_selectedCell:-1,tabIndex:"0",cellClass:"dijitPaletteCell",dyeClass:null,_dyeFactory:function(_b){
 var _c=typeof this.dyeClass=="string"?_7.getObject(this.dyeClass):this.dyeClass;
 return new _c(_b);
 },_preparePalette:function(_d,_e){
@@ -8,7 +8,7 @@ this._cells=[];
 var _f=this._blankGif;
 this.connect(this.gridNode,"ondijitclick","_onCellClick");
 for(var row=0;row<_d.length;row++){
-var _10=_4.create("tr",{tabIndex:"-1"},this.gridNode);
+var _10=_4.create("tr",{tabIndex:"-1",role:"row"},this.gridNode);
 for(var col=0;col<_d[row].length;col++){
 var _11=_d[row][col];
 if(_11){

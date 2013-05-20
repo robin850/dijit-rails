@@ -24,7 +24,7 @@ _c.set("checked",false);
 }));
 }
 },_getSubmitValue:function(_d){
-return _d===null?"on":_d;
+return _d==null?"on":_d;
 },_onClick:function(e){
 if(this.checked||this.disabled){
 _4.stop(e);

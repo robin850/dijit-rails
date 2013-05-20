@@ -127,7 +127,9 @@ a.parentNode.removeChild(a);
 }
 },this);
 },_onCloseDialog:function(){
+if(this.editor.focused){
 this.editor.focus();
+}
 },_getCurrentValues:function(a){
 var url,_1e,_1f;
 if(a&&a.tagName.toLowerCase()===this.tag){
@@ -143,6 +145,7 @@ return {urlInput:url||"",textInput:_1e||"",targetSelect:_1f||""};
 var a,b,fc;
 if(_6("ie")){
 var sel=_c.getSelection(this.editor.window);
+if(sel.rangeCount){
 var _20=sel.getRangeAt(0);
 a=_20.endContainer;
 if(a.nodeType===3){
@@ -162,6 +165,7 @@ fc=_20.startContainer.firstChild;
 if(fc&&(fc.nodeName&&fc.nodeName.toLowerCase()==this.tag)){
 a=fc;
 this.editor._sCall("selectElement",[a]);
+}
 }
 }
 }

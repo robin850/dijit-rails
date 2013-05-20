@@ -295,6 +295,15 @@ rn.rowNode.style.display="none";
 this.domNode.setAttribute("role","presentation");
 this.domNode.removeAttribute("aria-expanded");
 this.domNode.removeAttribute("aria-multiselectable");
+if(this["aria-label"]){
+rn.containerNode.setAttribute("aria-label",this["aria-label"]);
+this.domNode.removeAttribute("aria-label");
+}else{
+if(this["aria-labelledby"]){
+rn.containerNode.setAttribute("aria-labelledby",this["aria-labelledby"]);
+this.domNode.removeAttribute("aria-labelledby");
+}
+}
 rn.labelNode.setAttribute("role","presentation");
 rn.containerNode.setAttribute("role","tree");
 rn.containerNode.setAttribute("aria-expanded","true");
@@ -552,7 +561,7 @@ this.focusNode(_8e);
 }
 }
 },isExpandoNode:function(_8f,_90){
-return _7.isDescendant(_8f,_90.expandoNode);
+return _7.isDescendant(_8f,_90.expandoNode)||_7.isDescendant(_8f,_90.expandoNodeText);
 },_onClick:function(_91,e){
 var _92=e.target,_93=this.isExpandoNode(_92,_91);
 if((this.openOnClick&&_91.isExpandable)||_93){

@@ -173,7 +173,9 @@ _33.values=this.params.custom;
 var _34=this.editor;
 this.button=new _32(_5.delegate({dir:_34.dir,lang:_34.lang},_33));
 this.connect(this.button.select,"onChange",function(_35){
+if(this.editor.focused){
 this.editor.focus();
+}
 if(this.command=="fontName"&&_35.indexOf(" ")!=-1){
 _35="'"+_35+"'";
 }

@@ -142,7 +142,6 @@ this._abortQuery();
 if(this._opened){
 this.inherited(arguments);
 this.domNode.setAttribute("aria-expanded","false");
-this.focusNode.removeAttribute("aria-activedescendant");
 }
 },_setBlurValue:function(){
 var _1d=this.get("displayedValue");
@@ -160,6 +159,7 @@ this._handleOnChange(this.value,true);
 this._refreshState();
 }
 }
+this.focusNode.removeAttribute("aria-activedescendant");
 },_setItemAttr:function(_1e,_1f,_20){
 var _21="";
 if(_1e){
@@ -193,6 +193,7 @@ this._announceOption(_25);
 }
 this._setCaretPos(this.focusNode,this.focusNode.value.length);
 this._handleOnChange(this.value,true);
+this.focusNode.removeAttribute("aria-activedescendant");
 },_startSearchAll:function(){
 this._startSearch("");
 },_startSearchFromInput:function(){
@@ -202,8 +203,6 @@ this.inherited(arguments);
 if(!this.dropDown){
 var _26=this.id+"_popup",_27=_6.isString(this.dropDownClass)?_6.getObject(this.dropDownClass,false):this.dropDownClass;
 this.dropDown=new _27({onChange:_6.hitch(this,this._selectOption),id:_26,dir:this.dir,textDir:this.textDir});
-this.focusNode.removeAttribute("aria-activedescendant");
-this.textbox.setAttribute("aria-owns",_26);
 }
 this._lastInput=key;
 this.inherited(arguments);
@@ -242,7 +241,7 @@ return {html:_2e=="html",label:_2d};
 },doHighlight:function(_2f,_30){
 var _31=(this.ignoreCase?"i":"")+(this.highlightMatch=="all"?"g":""),i=this.queryExpr.indexOf("${0}");
 _30=_8.escapeString(_30);
-return this._escapeHtml(_2f.replace(new RegExp((i==0?"^":"")+"("+_30+")"+(i==(this.queryExpr.length-4)?"$":""),_31),"￿$1￿")).replace(/\uFFFF([^\uFFFF]+)\uFFFF/g,"<span class=\"dijitComboBoxHighlightMatch\">$1</span>");
+return this._escapeHtml(_2f.replace(new RegExp((i==0?"^":"")+"("+_30+")"+(i==(this.queryExpr.length-4)?"$":""),_31),"\uffff$1\uffff")).replace(/\uFFFF([^\uFFFF]+)\uFFFF/g,"<span class=\"dijitComboBoxHighlightMatch\">$1</span>");
 },_escapeHtml:function(str){
 str=String(str).replace(/&/gm,"&amp;").replace(/</gm,"&lt;").replace(/>/gm,"&gt;").replace(/"/gm,"&quot;");
 return str;

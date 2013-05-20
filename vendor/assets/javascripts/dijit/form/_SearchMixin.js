@@ -25,7 +25,7 @@ if(this.disabled||this.readOnly){
 return;
 }
 var _c=_b.charOrCode;
-if(_b.altKey||((_b.ctrlKey||_b.metaKey)&&(_c!="x"&&_c!="v"))||_c==_4.SHIFT){
+if("type" in _b&&_b.type.substring(0,3)=="key"&&(_b.altKey||((_b.ctrlKey||_b.metaKey)&&(_c!="x"&&_c!="v"))||_c==_4.SHIFT)){
 return;
 }
 var _d=false;

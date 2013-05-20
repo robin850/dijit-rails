@@ -27,7 +27,8 @@ var _1c=_3("dijit.layout._AccordionInnerContainer",[_11,_14],{baseClass:"dijitAc
 this.domNode=_8.place("<div class='"+this.baseClass+"' role='presentation'>",this.contentWidget.domNode,"after");
 var _1d=this.contentWidget,cls=_b.isString(this.buttonWidget)?_b.getObject(this.buttonWidget):this.buttonWidget;
 this.button=_1d._buttonWidget=(new cls({contentWidget:_1d,label:_1d.title,title:_1d.tooltip,dir:_1d.dir,lang:_1d.lang,textDir:_1d.textDir,iconClass:_1d.iconClass,id:_1d.id+"_button",parent:this.parent})).placeAt(this.domNode);
-this.containerNode=_8.place("<div class='dijitAccordionChildWrapper' style='display:none'>",this.domNode);
+this.containerNode=_8.place("<div class='dijitAccordionChildWrapper' role='tabpanel' style='display:none'>",this.domNode);
+this.containerNode.setAttribute("aria-labelledby",this.button.id);
 _8.place(this.contentWidget.domNode,this.containerNode);
 },postCreate:function(){
 this.inherited(arguments);

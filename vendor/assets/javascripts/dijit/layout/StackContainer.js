@@ -9,7 +9,6 @@ require(_c);
 var _d=_3("dijit.layout.StackContainer",_b,{doLayout:true,persist:false,baseClass:"dijitStackContainer",buildRendering:function(){
 this.inherited(arguments);
 _4.add(this.domNode,"dijitLayoutContainer");
-this.containerNode.setAttribute("role","tabpanel");
 },postCreate:function(){
 this.inherited(arguments);
 this.connect(this.domNode,"onkeypress",this._onKeyPress);

@@ -84,7 +84,6 @@ _24.set("checked",true);
 this._currentChild=_22;
 _24.focusNode.setAttribute("tabIndex","0");
 var _25=_8.byId(this.containerId);
-_25.containerNode.setAttribute("aria-labelledby",_24.id);
 },onButtonClick:function(_26){
 var _27=this.pane2button[_26.id];
 _7.focus(_27.focusNode);

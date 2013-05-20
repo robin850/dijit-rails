@@ -20,7 +20,9 @@ this.button.focus();
 this.toggle();
 _7.stop(e);
 setTimeout(_a.hitch(this,function(){
+if(this.editor.focused){
 this.editor.focus();
+}
 }),100);
 }));
 },_showSource:function(_18){
@@ -171,6 +173,7 @@ _3.set(this.sourceArea,"readOnly",true);
 this._readOnly=true;
 }
 _6.set(this.sourceArea,{padding:"0px",margin:"0px",borderWidth:"0px",borderStyle:"none"});
+_3.set(this.sourceArea,"aria-label",this.editor.id);
 _4.place(this.sourceArea,ed.iframe,"before");
 if(_b("ie")&&ed.iframe.parentNode.lastChild!==ed.iframe){
 _6.set(ed.iframe.parentNode.lastChild,{width:"0px",height:"0px",padding:"0px",margin:"0px",borderWidth:"0px",borderStyle:"none"});
