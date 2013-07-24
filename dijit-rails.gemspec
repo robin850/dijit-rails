@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Dijit with Ruby on Rails}
   gem.summary       = %q{Use the cool dijit toolkit with Ruby on Rails}
   gem.homepage      = "https://github.com/robin850/dijit-rails"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
   gem.name          = "dijit-rails"
